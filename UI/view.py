@@ -34,9 +34,11 @@ class View(ft.UserControl):
         # First row with some controls
         self.txt_latitude = ft.TextField(label="Latitude", hint_text="inserire una latitudine")
         self.txt_longitude = ft.TextField(label="Longitude", hint_text="inserire una longitudine")
+        self._controller.MaxMinLatLng()
+
         self.ddshape = ft.Dropdown(label="Shape",
                                    hint_text="Forma da analizzare per gli avvistamenti.")
-        self._controller.fill_ddshape()
+        self._controller.riempi_ddshape()
 
         row1 = ft.Row([self.txt_latitude, self.txt_longitude, self.ddshape],
                       alignment=ft.MainAxisAlignment.SPACE_EVENLY)
